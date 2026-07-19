@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:05,388
+Kajambe mới mà người hâm mộ chờ đợi đã có mặt! Sau khi làm việc chăm chỉ trong tuần này,
+
+2
+00:00:05,388 --> 00:00:12,500
+Cuộc thử nghiệm cuối cùng đã được đưa ra ngày hôm nay. Dự án này tốn rất nhiều tiền và tiêu thụ rất nhiều năng lượng. Không có nhiều điều để nói,
+
+3
+00:00:12,500 --> 00:00:19,397
+Bắt đầu xem trực tiếp. Đây là phiên bản V3 của chú Kajambe của chúng tôi, có thêm những hư hỏng, gần như mới,
+
+4
+00:00:19,397 --> 00:00:25,000
+Mũ đội đầu và phụ kiện được cập nhật theo thời gian thực, sau đó áo giáp được thay đổi theo số lượng theo thời gian thực.
+
+5
+00:00:25,000 --> 00:00:31,889
+Sau đó thời gian được cập nhật cứ sau mười phút. Bây giờ vẫn còn thiếu sót, chỉ là do thời gian mà thôi.
+
+6
+00:00:31,889 --> 00:00:35,444
+Vì thế không thể bỏ qua phụ kiện lúc này.
+
+7
+00:00:35,444 --> 00:00:39,667
+Giờ đây, chênh lệch giá giữa sẵn sàng chiến đấu và sẵn sàng chiến đấu đã được thêm vào giao diện.
+
+8
+00:00:39,667 --> 00:00:46,333
+Sau đó thay thế tài khoản giả ban đầu và tài khoản không giả bằng cách cộng và trừ số tiền, sau đó làm mới tài khoản đó.
+
+9
+00:00:46,333 --> 00:00:51,000
+Bây giờ nó được cập nhật rất nhanh, bây giờ nó được cập nhật mười phút một lần.
+
+10
+00:00:51,000 --> 00:00:54,516
+Tất nhiên, bây giờ bạn có thể thấy 110.000, 180.000,
+
+11
+00:00:54,516 --> 00:01:00,570
+Thời gian cho 350.000 được cập nhật khác nhau. Sẽ có một khoảng thời gian một phút ở giữa.
+
+12
+00:01:00,570 --> 00:01:05,844
+Điều này là bình thường. Nói chung là chúng sẽ được cập nhật dần dần. Ví dụ,
+
+13
+00:01:05,844 --> 00:01:12,094
+Ví dụ, chiếc đầu 780.000 tệ này hiện có 64.000 tệ, đầu cấp 5 hiện tại gần như mới tinh.
+
+14
+00:01:12,094 --> 00:01:16,000
+Có thể bị mắc kẹt rất nhiều. Giống như trước đây, điều này không thể được tính toán.
+
+15
+00:01:16,000 --> 00:01:21,485
+Đây là phiên bản V3 của chúng tôi, vẫn đang trong quá trình thử nghiệm nội bộ. Thường được cập nhật cứ sau mười phút.
+
+16
+00:01:21,485 --> 00:01:27,146
+Thuật toán vẫn giống như trước, tất cả đều dựa trên việc chi tiêu ít Huff Coin nhất và đến gần trạm thẻ nhất có thể.
+
+17
+00:01:27,146 --> 00:01:32,808
+Được rồi, đây là danh sách đen và đỏ của chúng tôi về chức năng phạm vi mở rộng, mất gần như toàn bộ và không mất áo giáp mũ bảo hiểm.
+
+18
+00:01:32,808 --> 00:01:37,938
+Điều này nhằm cho bạn biết chi tiết hơn về vị trí mà mũ bảo hiểm và áo giáp đầu tiên có thể bị kẹt.
+
+19
+00:01:37,938 --> 00:01:41,300
+Và với giao diện này, tôi biết có rất nhiều người giống tôi.
+
+20
+00:01:41,300 --> 00:01:46,689
+Khi vẫn còn một ít tiền, không cách nào biết được khả năng sẵn sàng chiến đấu mới và bị hư hại của Jihu là bao nhiêu.
+
+21
+00:01:46,689 --> 00:01:52,796
+Khi đó, chức năng này sẽ có thể giúp ích cho bạn rất nhiều, đồng thời cho bạn biết thương hiệu Jihu mới nào có nhiều tài khoản giả mạo nhất.
+
+22
+00:01:52,796 --> 00:01:58,364
+Hoặc nơi nào có thể phù hợp hơn với việc chuẩn bị chiến đấu của bạn. Tất nhiên, áo giáp cũng có chức năng này.
+
+23
+00:01:58,364 --> 00:02:02,855
+Nhưng nói đến áo giáp thì nhìn chung không có lời nào sai, tất cả đều là B-A. Thông qua điều này,
+
+24
+00:02:02,855 --> 00:02:07,705
+Bạn có thể biết bộ giáp nào có tài khoản giả mạo thấp nhất phải không? Chi phí rất lớn,
+
+25
+00:02:07,705 --> 00:02:10,040
+Tất cả những gì nó cần là sự chú ý của bạn.

@@ -1,0 +1,7 @@
+1
+00:00:00,000 --> 00:00:18,103
+The main package is treasures, and I have accumulated 531 treasures so far this month.
+
+2
+00:00:18,103 --> 00:00:28,800
+Today I will show you how the explosion rate is.

@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:05,388
+¡El nuevo Kajambe que los fans estaban esperando ya está aquí! Después de mi arduo trabajo esta semana,
+
+2
+00:00:05,388 --> 00:00:12,500
+La prueba finalmente se lanzó hoy. Este proyecto costó mucho dinero y consumió mucha energía. No hay mucho que decir
+
+3
+00:00:12,500 --> 00:00:19,397
+Empiece a mirar directamente. Esta es la versión V3 de nuestro tío Kajambe, con el añadido dañado, casi nuevo,
+
+4
+00:00:19,397 --> 00:00:25,000
+El casco y los accesorios se actualizaron en tiempo real y luego la armadura se cambió a la cantidad en tiempo real.
+
+5
+00:00:25,000 --> 00:00:31,889
+Luego, la hora se actualiza cada diez minutos. Ahora todavía hay un defecto, sólo por culpa del tiempo.
+
+6
+00:00:31,889 --> 00:00:35,444
+Por lo tanto, los accesorios no se pueden ignorar ahora.
+
+7
+00:00:35,444 --> 00:00:39,667
+Ahora se ha agregado a la interfaz la diferencia de precio entre preparación para el combate y preparación para el combate.
+
+8
+00:00:39,667 --> 00:00:46,333
+Luego reemplace la cuenta falsa original y la cuenta no falsa con la suma y resta de la cantidad, y luego actualícela.
+
+9
+00:00:46,333 --> 00:00:51,000
+Ahora se actualiza muy rápidamente, ahora se actualiza cada diez minutos.
+
+10
+00:00:51,000 --> 00:00:54,516
+Por supuesto, ahora puedes ver 110.000, 180.000,
+
+11
+00:00:54,516 --> 00:01:00,570
+Los tiempos para 350.000 se actualizan de forma diferente. Entre medias habrá un intervalo de un minuto.
+
+12
+00:01:00,570 --> 00:01:05,844
+Esto es normal. En términos generales, se actualizarán gradualmente. Por ejemplo,
+
+13
+00:01:05,844 --> 00:01:12,094
+Por ejemplo, este con 780.000 yuanes ahora tiene 64.000 yuanes, y el cabezal de nivel 5 actual es casi nuevo.
+
+14
+00:01:12,094 --> 00:01:16,000
+Puede quedarse atascado mucho. Como antes, esto no se puede calcular.
+
+15
+00:01:16,000 --> 00:01:21,485
+Esta es nuestra versión V3, que aún se encuentra en pruebas internas. Generalmente se actualiza cada diez minutos.
+
+16
+00:01:21,485 --> 00:01:27,146
+El algoritmo es el mismo que antes, todos se basan en gastar la menor cantidad de Huff Coin y acercarse lo más posible a la estación de tarjetas.
+
+17
+00:01:27,146 --> 00:01:32,808
+Bien, esta es nuestra lista negra y roja de la función de alcance extendido, pérdida casi total y sin pérdida de armadura del casco.
+
+18
+00:01:32,808 --> 00:01:37,938
+Esto es para contarte con más detalle dónde pueden atascarse el primer casco y la armadura.
+
+19
+00:01:37,938 --> 00:01:41,300
+Y con esta interfaz sé que hay mucha gente como yo.
+
+20
+00:01:41,300 --> 00:01:46,689
+Cuando todavía quedaba un poco de dinero, no había forma de saber cuál era la preparación para el combate nueva y dañada de Jihu.
+
+21
+00:01:46,689 --> 00:01:52,796
+En ese momento, esta función podrá ayudarte mucho y luego decirte qué nueva marca Jihu tiene más cuentas falsas.
+
+22
+00:01:52,796 --> 00:01:58,364
+O qué lugar puede adaptarse mejor a tus preparativos de combate. Por supuesto, la armadura también tiene esta función.
+
+23
+00:01:58,364 --> 00:02:02,855
+Pero cuando se trata de armaduras, generalmente no hay cuentas falsas, todas son B-A. A través de esto,
+
+24
+00:02:02,855 --> 00:02:07,705
+Puedes saber qué armadura tiene la cuenta falsa más baja, ¿verdad? El costo es enorme,
+
+25
+00:02:07,705 --> 00:02:10,040
+Todo lo que necesita es tu atención.

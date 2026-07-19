@@ -1,0 +1,7 @@
+1
+00:00:00,000 --> 00:00:18,103
+El paquete principal son los tesoros y he acumulado 531 tesoros en lo que va de mes.
+
+2
+00:00:18,103 --> 00:00:28,800
+Hoy les mostraré cómo es la tasa de explosión.

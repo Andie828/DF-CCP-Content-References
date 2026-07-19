@@ -1,0 +1,199 @@
+1
+00:00:00,000 --> 00:00:05,287
+Không được đâu anh trai! Shushu chạy dao cuối cùng đã mở ra sự giàu có chưa từng có! Mười hai điểm phân phối kho báu Đập số 0,
+
+2
+00:00:05,287 --> 00:00:10,418
+Tất cả được thực hiện trong một video! Chỉ hôm nay, ngày 8 tháng 8, Delta đã chính thức cập nhật sự kiện có thời gian giới hạn Tháng Kho Báu.
+
+3
+00:00:10,418 --> 00:00:15,549
+Điểm kho báu đã được thêm vào mười hai địa điểm trong Dam Zero và bạn chỉ cần gửi bản đồ kho báu để đổi lấy kho báu.
+
+4
+00:00:15,549 --> 00:00:19,747
+Nếu mở kho báu bên ngoài, bạn không chỉ có cơ hội nhận được lò phản ứng vi mô, Dunlin vàng, v.v. Big Red,
+
+5
+00:00:19,747 --> 00:00:23,324
+Thậm chí còn có cơ hội nhận được những món đồ sưu tầm cực hiếm với những vòng tròn được chạm khắc đầy màu sắc! Ngoài ra,
+
+6
+00:00:23,324 --> 00:00:26,900
+Những airdrop tiếp tế thất lạc đã lâu cũng đã được bổ sung vào trận chiến, chờ lũ chuột tìm kiếm.
+
+7
+00:00:26,900 --> 00:00:32,012
+Số này của lớp "Kho báu Polaris" sẽ đề cập đến vị trí của kho báu, cách lấy bản đồ kho báu, lợi ích của việc mở khóa kho báu,
+
+8
+00:00:32,012 --> 00:00:36,350
+Bốn khía cạnh bao gồm các kỹ thuật mua lại nguồn cung sẽ được giải thích. Có rất nhiều nội dung nên các bạn nên thích và sưu tầm.
+
+9
+00:00:36,350 --> 00:00:39,294
+Nếu đến vòng tròn lớp đầy màu sắc, bạn nhớ quay lại và nộp bài tập về nhà nhé!
+
+10
+00:00:39,294 --> 00:00:42,702
+Phần đầu tiên là giải thích về vị trí phân bố của các báu vật. Có thể thấy từ quy định rằng
+
+11
+00:00:42,702 --> 00:00:47,350
+Mỗi điểm kho báu chỉ có thể được tương tác một lần trong mỗi trò chơi và bản đồ kho báu tương ứng sẽ bị tiêu thụ sau khi mở.
+
+12
+00:00:47,350 --> 00:00:50,293
+Tuy nhiên, nhiều kho báu có thể được mở trong cùng một vòng. Trong trò chơi,
+
+13
+00:00:50,293 --> 00:00:53,392
+Hiển thị bản đồ kho báu để xem vị trí phân phối của mười hai kho báu.
+
+14
+00:00:53,392 --> 00:00:56,800
+Vị trí kho báu đầu tiên nằm ở phía trước hộp gỗ trên bệ trung tâm của lối đi ngầm.
+
+15
+00:00:56,800 --> 00:01:00,986
+Kho báu thứ hai nằm dưới tháp canh gần khu vực đường ống ở phía nam của nhà máy xi măng.
+
+16
+00:01:00,986 --> 00:01:04,669
+Điểm kho báu thứ ba nằm trên kệ phía trước điểm hồi sinh đường ống của trại quân đội.
+
+17
+00:01:04,669 --> 00:01:08,018
+Điểm kho báu thứ tư nằm trên một container ở phía nam của trung tâm du khách.
+
+18
+00:01:08,018 --> 00:01:11,199
+Điểm kho báu thứ năm nằm cạnh container gần bãi sông.
+
+19
+00:01:11,199 --> 00:01:14,213
+Vị trí kho báu thứ sáu nằm trong lán ở phía nam của doanh trại quân sự nhỏ.
+
+20
+00:01:14,213 --> 00:01:17,729
+Điểm bảo vật thứ bảy nằm cạnh thùng chứa ở phía bắc của trạm sửa chữa sườn núi.
+
+21
+00:01:17,729 --> 00:01:21,914
+Vị trí kho báu thứ tám nằm trên khuôn chứa, gần tổ chim.
+
+22
+00:01:21,914 --> 00:01:26,100
+Điểm kho báu thứ chín nằm cạnh container bên dưới đường zipline trên đỉnh đập trong khu hành chính.
+
+23
+00:01:26,100 --> 00:01:31,365
+Điều này được ẩn sâu hơn. Điểm kho báu thứ mười nằm ở phía tây của trung tâm du khách trên đường cao tốc, cạnh ô tô.
+
+24
+00:01:31,365 --> 00:01:36,471
+Điểm kho báu thứ mười một nằm trong đường ống của công trường xây dựng khu hành chính, ngay cạnh căn phòng nhỏ.
+
+25
+00:01:36,471 --> 00:01:41,736
+Kho báu cuối cùng nằm ở trung tâm nhà máy xi măng, ẩn sau đống hàng cạnh nhà máy xi măng.
+
+26
+00:01:41,736 --> 00:01:45,087
+Cần phải xem xét cẩn thận. Sau khi nói về việc phân bổ điểm của mười hai báu vật,
+
+27
+00:01:45,087 --> 00:01:47,320
+Hãy nói về cách lấy được bản đồ kho báu.
+
+28
+00:01:47,320 --> 00:01:51,149
+Các phương pháp hiện được biết đến để lấy nó chủ yếu bao gồm việc sử dụng manh mối trên bản đồ kho báu để đổi lấy chúng.
+
+29
+00:01:51,149 --> 00:01:54,500
+Manh mối này có thể thu được bằng cách đánh bại Treasure Rat Rat trong trận chiến.
+
+30
+00:01:54,500 --> 00:01:58,511
+Tôi tin rằng cách đây một thời gian, các học sinh lẽ ra đã thu thập được rất nhiều manh mối về bản đồ kho báu, phải không?
+
+31
+00:01:58,511 --> 00:02:03,265
+Đã đến lúc đưa nó vào sử dụng. Cách thứ hai là tìm kiếm các thùng chứa và hộp tiếp tế airdrop khác nhau trong trận chiến.
+
+32
+00:02:03,265 --> 00:02:05,790
+Trong số đó, các hộp tiếp tế được airdrop sẽ có khả năng đánh rơi bản đồ kho báu rất cao.
+
+33
+00:02:05,790 --> 00:02:10,544
+Cách thứ ba là sử dụng vật phẩm trong Trung tâm Nghiên cứu và Phát triển của Cục Đạn dược để đổi lấy gói cung cấp bản đồ kho báu.
+
+34
+00:02:10,544 --> 00:02:14,852
+Một bếp lò ngoài trời và các que diêm săn bắn sẽ cần phải được nộp để đổi thưởng. Chính vì hoạt động này mà
+
+35
+00:02:14,852 --> 00:02:18,269
+Giá bếp ngoài trời ở nhà buôn hiện nay đã tăng vọt lên 310.000.
+
+36
+00:02:18,269 --> 00:02:20,200
+Giá các trận đấu cũng đã tăng lên 140.000.
+
+37
+00:02:20,200 --> 00:02:24,750
+Các bác thân mến, nếu nhặt được hai món đồ này thì các bác không được nhắm mắt làm ngơ như trước nữa.
+
+38
+00:02:24,750 --> 00:02:28,280
+Vậy những vật phẩm nào có thể mở khóa được từ kho báu mang ra trong game?
+
+39
+00:02:28,280 --> 00:02:32,987
+Big Red được biết đến chủ yếu bao gồm những thứ sau, và thậm chí có thể có được bộ sưu tập cực kỳ hiếm gồm các vòng tròn nhỏ được chạm khắc đầy màu sắc.
+
+40
+00:02:32,987 --> 00:02:35,929
+Không biết có bạn cùng lớp nào của bạn may mắn như Ah Xing không?
+
+41
+00:02:35,929 --> 00:02:39,900
+Tại đây, Ah Xing cũng chúc các học sinh tìm được kho báu yêu thích của mình. Đối với các hộp cung cấp airdrop,
+
+42
+00:02:39,900 --> 00:02:43,136
+Rơi ngẫu nhiên trong mỗi trận đấu. Đây là một mẹo nhỏ,
+
+43
+00:02:43,136 --> 00:02:47,990
+Khi hộp airdrop vẫn còn ở trên không, chúng ta giơ súng lên nhắm vào airdrop và nhấn chuột giữa để đánh dấu.
+
+44
+00:02:48,000 --> 00:02:52,307
+Mở lại bản đồ và bạn có thể thấy vị trí nơi airdrop sẽ rơi. Nếu không ở xa,
+
+45
+00:02:52,307 --> 00:02:55,128
+Bạn có thể lao tới đó càng sớm càng tốt để đảm bảo rằng việc tìm kiếm và trốn thoát được hoàn thành trong thời gian sớm nhất.
+
+46
+00:02:55,128 --> 00:03:00,177
+Nếu không, các đội khác có thể đến thi đấu. Được rồi, đó là tất cả cho video này.
+
+47
+00:03:00,177 --> 00:03:04,781
+Tôi hy vọng video của Ah Xing sẽ giúp học sinh mở khóa bộ sưu tập kho báu của riêng mình trong tuần tới.
+
+48
+00:03:04,781 --> 00:03:09,236
+Nếu học sinh cho rằng video này hữu ích với bạn, vui lòng nhấp vào trái tim nhỏ màu đỏ và dấu cộng cho Ah Xing.
+
+49
+00:03:09,236 --> 00:03:13,394
+Ah Xing rất biết ơn. Tôi là Polaris, một blogger chiến lược Delta và là một người rất hâm mộ.
+
+50
+00:03:13,394 --> 00:03:15,770
+Cảm ơn bạn đã quan tâm, hẹn gặp lại bạn ở số tiếp theo.
