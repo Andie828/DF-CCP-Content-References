@@ -14,14 +14,14 @@
     h1 { margin:0 0 8px; font-size:30px; line-height:1.1; }
     .sub { margin:0; color:var(--muted); line-height:1.55; max-width:880px; }
     select { min-width:180px; height:40px; border:1px solid var(--line); border-radius:10px; background:white; padding:0 12px; font-size:14px; }
-    .toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; padding-top:0; }
+    .toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; padding-top:0; }`r`n    .toolbarRight { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .filterBar { display:flex; gap:8px; flex-wrap:wrap; }
-    .filterBtn { border:1px solid var(--line); background:white; border-radius:999px; padding:8px 14px; font-size:14px; font-weight:700; color:#244052; cursor:pointer; }
+    .filterBtn, .ghostBtn, .primaryBtn { border:1px solid var(--line); background:white; border-radius:999px; padding:8px 14px; font-size:14px; font-weight:700; color:#244052; cursor:pointer; }`r`n    .ghostBtn:hover, .primaryBtn:hover, .filterBtn:hover { background:#f6fafb; }`r`n    .primaryBtn { background:var(--brand); color:white; border-color:var(--brand); }`r`n    .primaryBtn:hover { background:#0d655f; }`r`n    .ghostBtn:disabled, .primaryBtn:disabled { opacity:.5; cursor:not-allowed; }
     .filterBtn.active { background:var(--brand); color:white; border-color:var(--brand); }
     .summaryPill { border:1px solid var(--line); border-radius:999px; background:white; padding:8px 12px; font-size:13px; color:#294154; }
-    main { display:grid; grid-template-columns: 390px minmax(0,1fr); min-height:calc(100vh - 145px); }
+    main { display:grid; grid-template-columns: 410px minmax(0,1fr); min-height:calc(100vh - 145px); }
     .list { border-right:1px solid var(--line); background:rgba(255,255,255,.72); overflow:auto; max-height:calc(100vh - 145px); }
-    .item { width:100%; display:grid; grid-template-columns:60px 88px minmax(0,1fr); gap:10px; border:0; border-bottom:1px solid var(--line); background:transparent; text-align:left; padding:12px 14px; cursor:pointer; color:inherit; }
+    .item { width:100%; display:grid; grid-template-columns:28px 52px 88px minmax(0,1fr); gap:10px; border:0; border-bottom:1px solid var(--line); background:transparent; text-align:left; padding:12px 14px; cursor:pointer; color:inherit; }`r`n    .checkWrap { display:flex; align-items:flex-start; justify-content:center; padding-top:3px; }`r`n    .pickBox { width:18px; height:18px; accent-color:var(--brand); cursor:pointer; }
     .item:hover { background:#f6fafb; }
     .item.active { background:var(--brand-soft); box-shadow: inset 4px 0 0 var(--brand); }
     .rank { font-size:18px; font-weight:800; color:var(--brand); }
@@ -33,7 +33,7 @@
     .badge { display:inline-flex; align-items:center; border-radius:999px; padding:3px 8px; font-size:11px; font-weight:700; }
     .badge.cat { background:#ecf8f6; color:#0c675f; border:1px solid #bfdfd9; }
     .badge.play { background:#eef6ff; color:#24518a; border:1px solid #c6daf5; }
-    .badge.wait { background:#fff6df; color:#7d5200; border:1px solid #e7c15e; }
+    .badge.wait { background:#fff6df; color:#7d5200; border:1px solid #e7c15e; }`r`n    .badge.selected { background:#fff7e7; color:#8b5a00; border:1px solid #f0c676; }
     .detail { padding:20px; overflow:auto; max-height:calc(100vh - 145px); }
     .playerWrap { border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#0d1117; }
     .playerHead { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 12px; background:#111927; color:#dbe8ff; }
@@ -50,7 +50,7 @@
     .notice { margin-top:10px; border:1px solid var(--warn-line); background:var(--warn); color:#6b4700; border-radius:12px; padding:10px 12px; font-size:13px; line-height:1.5; }
     .detailGrid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:18px; margin-top:16px; align-items:start; }
     h2 { margin:0 0 10px; font-size:24px; line-height:1.24; }
-    .metaLine { color:var(--muted); font-size:13px; line-height:1.5; }
+    .metaLine { color:var(--muted); font-size:13px; line-height:1.5; }`r`n    .briefActions { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 0; }
     .stats { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin:14px 0; }
     .stat { border:1px solid var(--line); border-radius:12px; background:var(--panel); padding:10px; }
     .stat b { display:block; font-size:16px; }
@@ -59,7 +59,7 @@
     .box h3 { margin:0 0 8px; font-size:15px; }
     .insightList { margin:0; padding-left:18px; line-height:1.6; color:#263241; }
     .insightList li { margin-bottom:8px; }
-    .transcript { max-height:220px; overflow:auto; white-space:pre-wrap; font-size:13px; line-height:1.6; color:#334155; }
+    .transcript { max-height:220px; overflow:auto; white-space:pre-wrap; font-size:13px; line-height:1.6; color:#334155; }`r`n    .briefPreview { max-height:none; min-height:170px; background:#f8fbfd; border:1px dashed #cfe0ea; border-radius:12px; padding:12px; }
     .tagRow { display:flex; flex-wrap:wrap; gap:8px; }
     .tag { display:inline-flex; align-items:center; min-height:28px; border:1px solid #badbd6; background:#ecf8f6; color:#0b625b; border-radius:999px; padding:4px 10px; font-size:13px; font-weight:700; }
     .links { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
@@ -72,7 +72,7 @@
       .list { max-height:42vh; border-right:0; border-bottom:1px solid var(--line); }
       .detail { max-height:none; }
       .detailGrid { grid-template-columns:1fr; }
-      .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }`r`n      .item { grid-template-columns:28px 44px 88px minmax(0,1fr); }
     }
   </style>
 </head>
@@ -85,10 +85,7 @@
       </div>
       <select id="lang"></select>
     </div>
-    <div class="wrap toolbar">
-      <div class="filterBar" id="campaignFilters"></div>
-      <div class="summaryPill" id="headerSummary"></div>
-    </div>
+    <div class="wrap toolbar">`r`n      <div class="filterBar" id="campaignFilters"></div>`r`n      <div class="toolbarRight">`r`n        <div class="summaryPill" id="headerSummary"></div>`r`n        <button class="ghostBtn" id="clearSelectionBtn"></button>`r`n        <button class="primaryBtn" id="exportSelectedBtn"></button>`r`n      </div>`r`n    </div>
   </header>
   <main>
     <nav class="list" id="list"></nav>
@@ -107,8 +104,7 @@
       <div class="detailGrid">
         <div>
           <h2 id="videoTitle"></h2>
-          <div class="metaLine" id="videoMeta"></div>
-          <div class="stats" id="stats"></div>
+          <div class="metaLine" id="videoMeta"></div>`r`n          <div class="briefActions">`r`n            <button class="ghostBtn" id="toggleBriefBtn"></button>`r`n            <button class="primaryBtn" id="copyBriefBtn"></button>`r`n          </div>`r`n          <div class="stats" id="stats"></div>`r`n          <div class="box">`r`n            <h3 id="briefLabel"></h3>`r`n            <div class="transcript briefPreview" id="briefPreview"></div>`r`n          </div>
           <div class="box">
             <h3 id="summaryLabel"></h3>
             <ul class="insightList" id="insightList"></ul>
@@ -132,238 +128,8 @@
       </div>
     </section>
   </main>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    const state = {
-      data: null,
-      lang: localStorage.getItem("lang") || "zh",
-      overallIndex: 0,
-      filter: "all",
-      sourceType: null,
-      captions: [],
-      captionUrl: "",
-      youtubeReady: false,
-    };
-    let ytPlayer = null;
-    let pendingYoutubeId = null;
-    const fmt = new Intl.NumberFormat("zh-Hant");
-    const $ = (id) => document.getElementById(id);
-    const EXTRA = {
-      zh: { all:"全部", guide:"教學取向", value:"價值取向", fun:"搞笑取向", overall:"總排名", heat:"互動熱度", view:"播放", like:"點讚", comment:"留言", share:"分享", collect:"收藏", danmaku:"彈幕", favorite:"收藏夾", coins:"投幣", source:"原始連結", caption:"字幕檔", transcript:"ASR 校對稿", tags:"主類別與標籤", status:"播放與字幕狀態", analysis:"摘要分析", pending:"待補來源", playable:"可播放", bilibili:"Bilibili 備援", youtube:"YouTube 已就緒" },
-      en: { all:"All", guide:"Guide & Tutorials", value:"Rewards & Value", fun:"Fun & Memes", overall:"Overall ranking", heat:"Engagement", view:"Views", like:"Likes", comment:"Comments", share:"Shares", collect:"Collects", danmaku:"Danmaku", favorite:"Favorites", coins:"Coins", source:"Source", caption:"Subtitle file", transcript:"ASR transcript", tags:"Primary category & tags", status:"Playback & subtitle status", analysis:"Editorial analysis", pending:"Pending source", playable:"Playable", bilibili:"Bilibili fallback", youtube:"YouTube ready" },
-    };
-    function ex(key){ return (EXTRA[state.lang] && EXTRA[state.lang][key]) || EXTRA.en[key] || key; }
-    function t(key){ return (state.data.ui[state.lang] && state.data.ui[state.lang][key]) || (state.data.ui.zh && state.data.ui.zh[key]) || key; }
-    function currentVideos(){
-      if (state.filter === "all") return state.data.videos;
-      return state.data.videos.filter(v => v.primary_campaign_category === state.filter);
-    }
-    function currentVideo(){ return state.data.videos[state.overallIndex]; }
-    function localizedTitle(video){
-      const pack = (video.copy && (video.copy[state.lang] || video.copy.zh)) || {};
-      return pack.title || video.title || "";
-    }
-    function localizedBullets(video){
-      const bullets = (video.insight_bullets && (video.insight_bullets[state.lang] || video.insight_bullets.zh)) || [];
-      return bullets;
-    }
-    function localizedTags(video){
-      return (video.tag_translations && (video.tag_translations[state.lang] || video.tag_translations.zh)) || video.video_type_tags || [];
-    }
-    function ensureSelection(){
-      const visible = currentVideos();
-      if (!visible.length) { state.overallIndex = 0; return; }
-      const cur = currentVideo();
-      if (!cur || !visible.some(v => v.video_id === cur.video_id)) {
-        state.overallIndex = state.data.videos.findIndex(v => v.video_id === visible[0].video_id);
-      }
-    }
-    function renderHeader(){
-      $("pageTitle").textContent = t("title");
-      $("pageSubtitle").textContent = `${t("subtitle")} ${state.data.ui[state.lang]?.disclaimer || state.data.ui.zh?.disclaimer || ""}`;
-      $("headerSummary").textContent = `${state.data.stats.total_videos} videos · YouTube ${state.data.stats.youtube_uploaded_total} · Pending ${state.data.stats.youtube_pending_total}`;
-    }
-    function renderFilters(){
-      $("campaignFilters").innerHTML = ["all","guide","value","fun"].map(key => `<button class="filterBtn ${state.filter===key?'active':''}" onclick="selectFilter('${key}')">${ex(key)}</button>`).join("");
-    }
-    function renderLang(){
-      $("lang").innerHTML = Object.entries(state.data.languages).map(([code, label]) => `<option value="${code}">${label}</option>`).join("");
-      $("lang").value = state.lang;
-      renderHeader();
-      renderFilters();
-      renderList();
-      renderDetail();
-    }
-    function renderList(){
-      ensureSelection();
-      const visible = currentVideos();
-      $("list").innerHTML = visible.map(v => {
-        const overallIndex = state.data.videos.findIndex(item => item.video_id === v.video_id);
-        const statusBadge = v.youtube_video_id ? `<span class="badge play">${ex('youtube')}</span>` : (v.platform === 'bilibili' ? `<span class="badge play">${ex('bilibili')}</span>` : `<span class="badge wait">${ex('pending')}</span>`);
-        return `<button class="item ${overallIndex===state.overallIndex?'active':''}" onclick="selectVideo(${overallIndex})">
-          <div class="rank">#${v.rank}</div>
-          <img class="thumb" src="${v.cover_site_path || ''}" alt="">
-          <div class="meta">
-            <div class="title">${localizedTitle(v)}</div>
-            <div class="small">${v.author_name || ''} · ${ex(v.primary_campaign_category)} · ${fmt.format(Math.round(v.heat_score || 0))} ${ex('heat')}</div>
-            <div class="badges"><span class="badge cat">${ex(v.primary_campaign_category)}</span>${statusBadge}</div>
-          </div>
-        </button>`;
-      }).join("");
-    }
-    function sourceList(video){
-      return (video.player_sources || []).filter(s => (s.embed_url || s.url));
-    }
-    function pickSource(video){
-      const sources = sourceList(video);
-      if (!sources.length) return null;
-      if (state.sourceType) {
-        const match = sources.find(s => s.type === state.sourceType);
-        if (match) return match;
-      }
-      return sources.find(s => s.type === video.default_player) || sources[0];
-    }
-    function renderSourceTabs(video, active){
-      const sources = sourceList(video);
-      $("sourceTabs").innerHTML = sources.map(s => `<button class="sourceTab ${active && active.type===s.type?'active':''}" onclick="selectSource('${s.type}')">${s.label}</button>`).join("");
-    }
-    function clearSubtitle(){ $("subtitleText").textContent = ""; state.captions = []; }
-    function renderPlaceholder(message){
-      $("playerShell").innerHTML = `<div class="placeholder">${message}</div><div class="subtitleOverlay"><div class="subtitleText" id="subtitleText"></div></div>`;
-    }
-    window.onYouTubeIframeAPIReady = () => {
-      state.youtubeReady = true;
-      if (pendingYoutubeId) loadYouTube(pendingYoutubeId);
-    };
-    function ensurePlayerHost(){
-      if (!document.getElementById("ytPlayer")) {
-        $("playerShell").innerHTML = `<div id="ytPlayer"></div><div class="subtitleOverlay"><div class="subtitleText" id="subtitleText"></div></div>`;
-        ytPlayer = null;
-      }
-    }
-    function loadYouTube(videoId){
-      pendingYoutubeId = videoId;
-      ensurePlayerHost();
-      if (!state.youtubeReady || !window.YT || !window.YT.Player) return;
-      if (!ytPlayer) {
-        ytPlayer = new YT.Player("ytPlayer", {
-          videoId,
-          playerVars: { rel:0, modestbranding:1, playsinline:1, cc_load_policy:0 },
-          events: { onReady: () => updateSubtitle() }
-        });
-      } else if (ytPlayer.loadVideoById) {
-        ytPlayer.loadVideoById(videoId);
-      }
-    }
-    function parseTimecode(raw){
-      const m = raw.trim().match(/(\d+):(\d+):(\d+)[,.](\d+)/);
-      if (!m) return 0;
-      return Number(m[1])*3600 + Number(m[2])*60 + Number(m[3]) + Number((m[4]+"000").slice(0,3))/1000;
-    }
-    function parseSrt(text){
-      return text.replace(/\r/g,"").split(/\n\s*\n/).map(block => {
-        const lines = block.split("\n").filter(Boolean);
-        const timeLine = lines.find(line => line.includes("-->"));
-        if (!timeLine) return null;
-        const [start, end] = timeLine.split("-->").map(x => x.trim());
-        const idx = lines.indexOf(timeLine);
-        return { start: parseTimecode(start), end: parseTimecode(end), text: lines.slice(idx + 1).join("\n").trim() };
-      }).filter(Boolean);
-    }
-    function captionLang(){ return state.lang === 'zh' ? 'zh-Hans' : state.lang; }
-    async function loadCaptions(video, source){
-      clearSubtitle();
-      if (!source || source.type !== 'youtube') return;
-      const url = `captions_full/${captionLang()}/${video.video_id}.srt`;
-      state.captionUrl = url;
-      try {
-        const res = await fetch(url, { cache:'no-store' });
-        if (!res.ok) throw new Error(String(res.status));
-        if (state.captionUrl !== url) return;
-        state.captions = parseSrt(await res.text());
-      } catch (e) {
-        state.captions = [];
-      }
-    }
-    function updateSubtitle(){
-      const subtitleEl = document.getElementById("subtitleText");
-      if (!subtitleEl || !ytPlayer || !ytPlayer.getCurrentTime || !state.captions.length) {
-        if (subtitleEl) subtitleEl.textContent = "";
-        return;
-      }
-      let current = 0;
-      try { current = ytPlayer.getCurrentTime(); } catch (e) { return; }
-      const cue = state.captions.find(item => current >= item.start && current < item.end);
-      subtitleEl.textContent = cue ? cue.text : "";
-    }
-    setInterval(updateSubtitle, 250);
-    function formatStat(value){ return fmt.format(Number(value || 0)); }
-    function statItems(video){
-      const s = video.platform_stats || {};
-      if (video.platform === 'bilibili') {
-        return [
-          [ex('view'), s.view], [ex('like'), s.like], [ex('comment'), s.reply], [ex('share'), s.share], [ex('favorite'), s.favorite]
-        ];
-      }
-      return [
-        [ex('like'), s.like || s.digg_count || 0], [ex('comment'), s.comment || s.comment_count || 0], [ex('share'), s.share || s.share_count || 0], [ex('collect'), s.collect || s.collect_count || 0], [ex('heat'), Math.round(video.heat_score || 0)]
-      ];
-    }
-    function renderPlayer(video, source){
-      if (!source) {
-        renderPlaceholder('No playable source yet.');
-        return;
-      }
-      if (source.type === 'youtube' && video.youtube_video_id) {
-        ensurePlayerHost();
-        loadYouTube(video.youtube_video_id);
-        return;
-      }
-      if (source.type === 'bilibili' && source.embed_url) {
-        ytPlayer = null;
-        $("playerShell").innerHTML = `<iframe src="${source.embed_url}" allowfullscreen></iframe><div class="subtitleOverlay"><div class="subtitleText" id="subtitleText"></div></div>`;
-        return;
-      }
-      renderPlaceholder(`Playback source is pending.<br><a href="${video.source_url || '#'}" target="_blank" style="color:#8dc4ff;">Open original source</a>`);
-    }
-    function renderDetail(){
-      ensureSelection();
-      const video = currentVideo();
-      const source = pickSource(video);
-      state.sourceType = source ? source.type : null;
-      renderSourceTabs(video, source);
-      renderPlayer(video, source);
-      loadCaptions(video, source);
-      $("playerStatus").textContent = source ? `${source.label} · ${video.youtube_video_id ? ex('playable') : ex('pending')}` : ex('pending');
-      $("playbackNotice").textContent = video.playback_notice_zh || '';
-      $("videoTitle").textContent = localizedTitle(video);
-      $("videoMeta").textContent = `${ex('overall')} #${video.rank} · ${video.author_name || ''} · ${video.published_at_text || ''}`;
-      $("stats").innerHTML = statItems(video).map(([label, val]) => `<div class="stat"><b>${formatStat(val)}</b><span>${label}</span></div>`).join('');
-      $("summaryLabel").textContent = ex('analysis');
-      $("insightList").innerHTML = localizedBullets(video).map(item => `<li>${item}</li>`).join('');
-      $("transcriptLabel").textContent = ex('transcript');
-      $("transcriptPreview").textContent = (video.asr && video.asr.transcript_preview) || 'ASR transcript unavailable.';
-      $("tagLabel").textContent = ex('tags');
-      const tags = [`${ex(video.primary_campaign_category)}`].concat(localizedTags(video));
-      $("tagChips").innerHTML = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-      $("statusLabel").textContent = ex('status');
-      $("statusText").innerHTML = [
-        `YouTube: ${video.youtube_upload_status || 'pending'}`,
-        `Subtitles: ${video.youtube_caption_status || ''}`,
-        `Playback: ${video.playback_status || ''}`
-      ].join('<br>');
-      const captionHref = `captions_full/${captionLang()}/${video.video_id}.srt`;
-      const links = [`<a href="${video.source_url}" target="_blank">${ex('source')}</a>`, `<a href="${captionHref}" target="_blank">${ex('caption')}</a>`];
-      if (video.youtube_watch_url) links.unshift(`<a href="${video.youtube_watch_url}" target="_blank">YouTube</a>`);
-      $("links").innerHTML = links.join('');
-    }
-    window.selectFilter = (key) => { state.filter = key; ensureSelection(); renderFilters(); renderList(); renderDetail(); };
-    window.selectVideo = (overallIndex) => { state.overallIndex = overallIndex; renderList(); renderDetail(); };
-    window.selectSource = (type) => { state.sourceType = type; renderDetail(); };
-    $("lang").addEventListener("change", (e) => { state.lang = e.target.value; localStorage.setItem("lang", state.lang); renderLang(); });
-    fetch('data/videos.json').then(r => r.json()).then(data => { state.data = data; renderLang(); });
-  </script>
-</body>
+  <script src="https://www.youtube.com/iframe_api"></script>`r`n  <script src="app.js"></script>`r`n</body>
 </html>
+
 
 
