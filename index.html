@@ -180,7 +180,7 @@
     }
     function renderHeader(){
       $("pageTitle").textContent = t("title");
-      $("pageSubtitle").textContent = t("subtitle");
+      $("pageSubtitle").textContent = `${t("subtitle")} ${state.data.ui[state.lang]?.disclaimer || state.data.ui.zh?.disclaimer || ""}`;
       $("headerSummary").textContent = `${state.data.stats.total_videos} videos · YouTube ${state.data.stats.youtube_uploaded_total} · Pending ${state.data.stats.youtube_pending_total}`;
     }
     function renderFilters(){
@@ -365,3 +365,4 @@
   </script>
 </body>
 </html>
+
