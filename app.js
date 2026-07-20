@@ -17,6 +17,15 @@ let ytPlayer = null;
 let pendingYoutubeId = null;
 const fmt = new Intl.NumberFormat("zh-Hant");
 const $ = (id) => document.getElementById(id);
+const WARNINGS = {
+  zh: "⚠請勿直接分享本網站或 YouTube link 給創作者，會有創作權疑慮！",
+  en: "⚠ Do not share this site or YouTube links directly with creators. It may create copyright risk.",
+  id: "⚠ Jangan bagikan situs ini atau link YouTube langsung kepada kreator. Ada risiko hak cipta.",
+  th: "⚠ ห้ามแชร์เว็บไซต์นี้หรือ YouTube link ให้ครีเอเตอร์โดยตรง เพราะอาจมีความเสี่ยงด้านลิขสิทธิ์",
+  vi: "⚠ Không chia sẻ trực tiếp website này hoặc link YouTube cho creator vì có thể phát sinh rủi ro bản quyền.",
+  es: "⚠ No compartas este sitio ni enlaces de YouTube directamente con creadores. Puede haber riesgo de derechos de autor.",
+  ms: "⚠ Jangan kongsi laman ini atau pautan YouTube terus kepada pencipta kerana mungkin ada risiko hak cipta.",
+};
 const EXTRA = {
   zh: {
     all:"全部", guide:"教學取向", value:"價值取向", fun:"搞笑取向", overall:"總排名", heat:"互動熱度",
@@ -64,6 +73,7 @@ function ensureSelection(){
 }
 function renderHeader(){
   $("pageTitle").textContent = t("title");
+  $("alertBanner").textContent = WARNINGS[state.lang] || WARNINGS.zh;
   $("pageSubtitle").textContent = `${t("subtitle")} ${state.data.ui[state.lang]?.disclaimer || state.data.ui.zh?.disclaimer || ""}`;
   $("headerSummary").textContent = `${state.data.stats.total_videos} videos · ${ex('selected')} ${state.selectedIds.size} · YouTube ${state.data.stats.youtube_uploaded_total}`;
   $("exportSelectedBtn").textContent = ex("export");
@@ -116,19 +126,29 @@ function pickSource(video){
 function renderSourceTabs(video, active){
   $("sourceTabs").innerHTML = sourceList(video).map(s => `<button class="sourceTab ${active && active.type===s.type?'active':''}" onclick="selectSource('${s.type}')">${s.label}</button>`).join("");
 }
-function clearSubtitle(){ $("subtitleText").textContent = ""; state.captions = []; }
+function clearSubtitle(){ const el = document.getElementById("subtitleText"); if (el) el.textContent = ""; state.captions = []; }
 function renderPlaceholder(message){ $("playerShell").innerHTML = `<div class="placeholder">${message}</div><div class="subtitleOverlay"><div class="subtitleText" id="subtitleText"></div></div>`; }
-window.onYouTubeIframeAPIReady = () => { state.youtubeReady = true; if (pendingYoutubeId) loadYouTube(pendingYoutubeId); };
+window.onYouTubeIframeAPIReady = () => {
+  state.youtubeReady = true;
+  const video = state.data ? currentVideo() : null;
+  if (video && pickSource(video)?.type === 'youtube') renderDetail();
+};
 function ensurePlayerHost(){
   if (!document.getElementById("ytPlayer")) {
     $("playerShell").innerHTML = `<div id="ytPlayer"></div><div class="subtitleOverlay"><div class="subtitleText" id="subtitleText"></div></div>`;
     ytPlayer = null;
   }
 }
-function loadYouTube(videoId){
+function renderYouTubeFallback(embedUrl){
+  $("playerShell").innerHTML = `<iframe src="${embedUrl}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="subtitleOverlay"><div class="subtitleText" id="subtitleText"></div></div>`;
+}
+function loadYouTube(videoId, embedUrl){
   pendingYoutubeId = videoId;
   ensurePlayerHost();
-  if (!state.youtubeReady || !window.YT || !window.YT.Player) return;
+  if (!state.youtubeReady || !window.YT || !window.YT.Player) {
+    if (embedUrl) renderYouTubeFallback(embedUrl);
+    return;
+  }
   if (!ytPlayer) {
     ytPlayer = new YT.Player("ytPlayer", {
       videoId,
@@ -194,8 +214,7 @@ function renderPlayer(video, source){
     return;
   }
   if (source.type === 'youtube' && video.youtube_video_id) {
-    ensurePlayerHost();
-    loadYouTube(video.youtube_video_id);
+    loadYouTube(video.youtube_video_id, source.embed_url || video.youtube_embed_url);
     return;
   }
   if (source.type === 'bilibili' && source.embed_url) {
@@ -208,55 +227,30 @@ function renderPlayer(video, source){
 function composeBrief(video){
   const bullets = localizedBullets(video);
   const lines = [
-    `${ex('localTitle')}:`,
-    `${localizedTitle(video)}`,
-    "",
-    `${ex('primaryCategory')}:`,
-    `${ex(video.primary_campaign_category)}`,
-    "",
-    `${ex('analysisLabel')}:`,
-    ...bullets.flatMap(item => [`- ${item}`, ""]),
-    `${ex('sourceField')}:`,
-    `${video.source_url || ''}`,
+    `${ex('localTitle')}:`, `${localizedTitle(video)}`, "",
+    `${ex('primaryCategory')}:`, `${ex(video.primary_campaign_category)}`, "",
+    `${ex('analysisLabel')}:`, ...bullets.flatMap(item => [`- ${item}`, ""]),
+    `${ex('sourceField')}:`, `${video.source_url || ''}`,
   ];
   return lines.join("\n").trim();
 }
 function composeBatchBrief(videos){
-  return videos.map((video, idx) => {
-    return [
-      `====================`,
-      `#${idx + 1}`,
-      "",
-      composeBrief(video)
-    ].join("\n");
-  }).join("\n\n");
+  return videos.map((video, idx) => [`====================`, `#${idx + 1}`, "", composeBrief(video)].join("\n")).join("\n\n");
 }
 async function copyText(text){
-  try {
-    await navigator.clipboard.writeText(text);
-    return true;
-  } catch (e) {
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch (e) {
     const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    try {
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-      return true;
-    } catch (err) {
-      document.body.removeChild(ta);
-      return false;
-    }
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); document.body.removeChild(ta); return true; }
+    catch (err) { document.body.removeChild(ta); return false; }
   }
 }
 function downloadTextFile(text, filename){
   const blob = new Blob([text], { type:'text/plain;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.click();
+  a.href = url; a.download = filename; a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 function sortedSelectedVideos(){ return state.data.videos.filter(v => state.selectedIds.has(v.video_id)).sort((a, b) => a.rank - b.rank); }
@@ -283,51 +277,28 @@ function renderDetail(){
   const tags = [`${ex(video.primary_campaign_category)}`].concat(localizedTags(video));
   $("tagChips").innerHTML = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
   $("statusLabel").textContent = ex('status');
-  $("statusText").innerHTML = [
-    `YouTube: ${video.youtube_upload_status || 'pending'}`,
-    `Subtitles: ${video.youtube_caption_status || ''}`,
-    `Playback: ${video.playback_status || ''}`
-  ].join('<br>');
+  $("statusText").innerHTML = [`YouTube: ${video.youtube_upload_status || 'pending'}`, `Subtitles: ${video.youtube_caption_status || ''}`, `Playback: ${video.playback_status || ''}`].join('<br>');
   const captionHref = `captions_full/${captionLang()}/${video.video_id}.srt`;
-  const links = [`<a href="${video.source_url}" target="_blank">${ex('source')}</a>`, `<a href="${captionHref}" target="_blank">${ex('caption')}</a>`];
-  if (video.youtube_watch_url) links.unshift(`<a href="${video.youtube_watch_url}" target="_blank">YouTube</a>`);
-  $("links").innerHTML = links.join('');
+  $("quickLinks").innerHTML = [`<a href="${video.source_url}" target="_blank">${ex('source')}</a>`, `<a href="${captionHref}" target="_blank">${ex('caption')}</a>`].join('');
 }
 window.selectFilter = (key) => { state.filter = key; ensureSelection(); renderFilters(); renderList(); renderDetail(); };
 window.selectVideo = (overallIndex) => { state.overallIndex = overallIndex; renderList(); renderDetail(); };
 window.selectSource = (type) => { state.sourceType = type; renderDetail(); };
 window.toggleSelection = (videoId) => {
-  if (state.selectedIds.has(videoId)) state.selectedIds.delete(videoId);
-  else state.selectedIds.add(videoId);
-  saveSelection();
-  renderHeader();
-  renderList();
-  renderDetail();
+  if (state.selectedIds.has(videoId)) state.selectedIds.delete(videoId); else state.selectedIds.add(videoId);
+  saveSelection(); renderHeader(); renderList(); renderDetail();
 };
-$("lang").addEventListener("change", (e) => {
-  state.lang = e.target.value;
-  localStorage.setItem("lang", state.lang);
-  renderLang();
-});
+$("lang").addEventListener("change", (e) => { state.lang = e.target.value; localStorage.setItem("lang", state.lang); renderLang(); });
 $("copyBriefBtn").addEventListener("click", async () => {
   const ok = await copyText(composeBrief(currentVideo()));
   if (ok) $("copyBriefBtn").textContent = ex('copied');
   setTimeout(() => { $("copyBriefBtn").textContent = ex('copy'); }, 1200);
 });
 $("toggleBriefBtn").addEventListener("click", () => { toggleSelection(currentVideo().video_id); });
-$("clearSelectionBtn").addEventListener("click", () => {
-  state.selectedIds = new Set();
-  saveSelection();
-  renderHeader();
-  renderList();
-  renderDetail();
-});
+$("clearSelectionBtn").addEventListener("click", () => { state.selectedIds = new Set(); saveSelection(); renderHeader(); renderList(); renderDetail(); });
 $("exportSelectedBtn").addEventListener("click", () => {
   const videos = sortedSelectedVideos();
   if (!videos.length) { alert(ex('noSelection')); return; }
   downloadTextFile(composeBatchBrief(videos), `fortune-run-brief-${currentLangCode()}-${videos.length}.txt`);
 });
-fetch('data/videos.json').then(r => r.json()).then(data => {
-  state.data = data;
-  renderLang();
-});
+fetch('data/videos.json').then(r => r.json()).then(data => { state.data = data; renderLang(); });
