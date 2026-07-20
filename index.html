@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Delta Force Fortune Run Content Reference Library</title>
   <style>
-    :root { color-scheme: light; --ink:#1d2430; --muted:#617082; --line:#d6ddea; --panel:#f5f8fb; --brand:#0f766e; --brand-soft:#e8f7f4; --warn:#fff6df; --warn-line:#e7c15e; --bg:#fbfcfe; }
+    :root { color-scheme: light; --ink:#1d2430; --muted:#617082; --line:#d6ddea; --panel:#f5f8fb; --brand:#0f766e; --brand-soft:#e8f7f4; --warn:#fff6df; --warn-line:#e7c15e; --bg:#fbfcfe; --danger:#9f1239; --danger-soft:#fff1f2; --danger-line:#f6b6c7; }
     * { box-sizing:border-box; }
     body { margin:0; font-family: Arial, "Microsoft JhengHei", "PingFang TC", sans-serif; background:linear-gradient(180deg,#eef5f6 0,#ffffff 180px); color:var(--ink); }
-    header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.9); backdrop-filter: blur(8px); position:sticky; top:0; z-index:20; }
+    header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.94); backdrop-filter: blur(8px); position:sticky; top:0; z-index:20; }
     .wrap { max-width:1320px; margin:0 auto; padding:18px 20px; }
     .topbar { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
     h1 { margin:0 0 8px; font-size:30px; line-height:1.1; }
-    .sub { margin:0; color:var(--muted); line-height:1.55; max-width:880px; }
+    .alertBanner { margin:0 0 12px; padding:12px 14px; border:1px solid var(--danger-line); border-radius:14px; background:var(--danger-soft); color:var(--danger); font-size:18px; font-weight:800; line-height:1.45; }
+    .sub { margin:0; color:var(--muted); line-height:1.7; max-width:920px; font-size:14px; }
     select { min-width:180px; height:40px; border:1px solid var(--line); border-radius:10px; background:white; padding:0 12px; font-size:14px; }
     .toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
     .toolbarRight { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
@@ -24,8 +25,8 @@
     .primaryBtn:hover { background:#0d655f; }
     .ghostBtn:disabled, .primaryBtn:disabled { opacity:.5; cursor:not-allowed; }
     .summaryPill { border:1px solid var(--line); border-radius:999px; background:white; padding:8px 12px; font-size:13px; color:#294154; }
-    main { display:grid; grid-template-columns:410px minmax(0,1fr); min-height:calc(100vh - 145px); }
-    .list { border-right:1px solid var(--line); background:rgba(255,255,255,.72); overflow:auto; max-height:calc(100vh - 145px); }
+    main { display:grid; grid-template-columns:410px minmax(0,1fr); min-height:calc(100vh - 185px); }
+    .list { border-right:1px solid var(--line); background:rgba(255,255,255,.72); overflow:auto; max-height:calc(100vh - 185px); }
     .item { width:100%; display:grid; grid-template-columns:28px 52px 88px minmax(0,1fr); gap:10px; border:0; border-bottom:1px solid var(--line); background:transparent; text-align:left; padding:12px 14px; cursor:pointer; color:inherit; }
     .item:hover { background:#f6fafb; }
     .item.active { background:var(--brand-soft); box-shadow: inset 4px 0 0 var(--brand); }
@@ -42,7 +43,7 @@
     .badge.play { background:#eef6ff; color:#24518a; border:1px solid #c6daf5; }
     .badge.wait { background:#fff6df; color:#7d5200; border:1px solid #e7c15e; }
     .badge.selected { background:#fff7e7; color:#8b5a00; border:1px solid #f0c676; }
-    .detail { padding:20px; overflow:auto; max-height:calc(100vh - 145px); }
+    .detail { padding:20px; overflow:auto; max-height:calc(100vh - 185px); }
     .playerWrap { border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#0d1117; }
     .playerHead { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 12px; background:#111927; color:#dbe8ff; }
     .sourceTabs { display:flex; gap:8px; flex-wrap:wrap; }
@@ -66,10 +67,8 @@
     .stat span { font-size:12px; color:var(--muted); }
     .box { border:1px solid var(--line); border-radius:14px; background:white; padding:14px; margin-top:12px; }
     .box h3 { margin:0 0 8px; font-size:15px; }
-    .insightList { margin:0; padding-left:18px; line-height:1.6; color:#263241; }
-    .insightList li { margin-bottom:8px; }
-    .transcript { max-height:220px; overflow:auto; white-space:pre-wrap; font-size:13px; line-height:1.6; color:#334155; }
-    .briefPreview { max-height:none; min-height:200px; background:#f8fbfd; border:1px dashed #cfe0ea; border-radius:12px; padding:12px; }
+    .transcript { max-height:220px; overflow:auto; white-space:pre-wrap; font-size:13px; line-height:1.75; color:#334155; }
+    .briefPreview { max-height:none; min-height:360px; background:#f8fbfd; border:1px dashed #cfe0ea; border-radius:12px; padding:18px 18px 20px; font-size:14px; line-height:1.9; letter-spacing:.01em; }
     .tagRow { display:flex; flex-wrap:wrap; gap:8px; }
     .tag { display:inline-flex; align-items:center; min-height:28px; border:1px solid #badbd6; background:#ecf8f6; color:#0b625b; border-radius:999px; padding:4px 10px; font-size:13px; font-weight:700; }
     .links { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
@@ -78,12 +77,13 @@
     .statusText { color:#374151; line-height:1.6; font-size:13px; }
     @media (max-width: 980px) {
       .topbar { flex-direction:column; }
-      main { grid-template-columns:1fr; }
+      main { grid-template-columns:1fr; min-height:auto; }
       .list { max-height:42vh; border-right:0; border-bottom:1px solid var(--line); }
       .detail { max-height:none; }
       .detailGrid { grid-template-columns:1fr; }
       .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .item { grid-template-columns:28px 44px 88px minmax(0,1fr); }
+      .alertBanner { font-size:16px; }
     }
   </style>
 </head>
@@ -92,6 +92,7 @@
     <div class="wrap topbar">
       <div>
         <h1 id="pageTitle"></h1>
+        <p class="alertBanner">⚠請勿直接分享本網站或 YouTube link 給創作者，會有創作權疑慮！</p>
         <p class="sub" id="pageSubtitle"></p>
       </div>
       <select id="lang"></select>
@@ -131,10 +132,6 @@
           <div class="box">
             <h3 id="briefLabel"></h3>
             <div class="transcript briefPreview" id="briefPreview"></div>
-          </div>
-          <div class="box">
-            <h3 id="summaryLabel"></h3>
-            <ul class="insightList" id="insightList"></ul>
           </div>
           <div class="box">
             <h3 id="transcriptLabel"></h3>

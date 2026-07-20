@@ -22,19 +22,21 @@ const EXTRA = {
     all:"全部", guide:"教學取向", value:"價值取向", fun:"搞笑取向", overall:"總排名", heat:"互動熱度",
     view:"播放", like:"點讚", comment:"留言", share:"分享", collect:"收藏", favorite:"收藏夾",
     source:"原始連結", caption:"字幕檔", transcript:"ASR 校對稿", tags:"主類別與標籤", status:"播放與字幕狀態",
-    analysis:"摘要分析", pending:"待補來源", playable:"可播放", bilibili:"Bilibili 備援", youtube:"YouTube 已就緒",
+    pending:"待補來源", playable:"可播放", bilibili:"Bilibili 備援", youtube:"YouTube 已就緒",
     selected:"已選", clear:"清空勾選", export:"匯出 Brief (.txt)", copy:"複製本支 Brief", add:"加入匯出", remove:"移出匯出",
     brief:"輸出預覽", localTitle:"Translated title", primaryCategory:"Primary category", sourceField:"Source link",
-    copied:"已複製", noSelection:"請先勾選至少 1 支影片", exportReady:"可直接轉發給當地團隊或創作者的精簡文字包"
+    copied:"已複製", noSelection:"請先勾選至少 1 支影片", exportReady:"可直接轉發給當地團隊或創作者的精簡文字包",
+    analysisLabel:"Editorial analysis"
   },
   en: {
     all:"All", guide:"Guide & Tutorials", value:"Rewards & Value", fun:"Fun & Memes", overall:"Overall ranking", heat:"Engagement",
     view:"Views", like:"Likes", comment:"Comments", share:"Shares", collect:"Collects", favorite:"Favorites",
     source:"Source", caption:"Subtitle file", transcript:"ASR transcript", tags:"Primary category & tags", status:"Playback & subtitle status",
-    analysis:"Editorial analysis", pending:"Pending source", playable:"Playable", bilibili:"Bilibili fallback", youtube:"YouTube ready",
+    pending:"Pending source", playable:"Playable", bilibili:"Bilibili fallback", youtube:"YouTube ready",
     selected:"Selected", clear:"Clear picks", export:"Export Brief (.txt)", copy:"Copy this brief", add:"Add to export", remove:"Remove from export",
     brief:"Export preview", localTitle:"Translated title", primaryCategory:"Primary category", sourceField:"Source link",
-    copied:"Copied", noSelection:"Select at least one video first", exportReady:"A lean text pack ready to forward to local teams or creators"
+    copied:"Copied", noSelection:"Select at least one video first", exportReady:"A lean text pack ready to forward to local teams or creators",
+    analysisLabel:"Editorial analysis"
   },
 };
 function ex(key){ return (EXTRA[state.lang] && EXTRA[state.lang][key]) || EXTRA.en[key] || key; }
@@ -206,21 +208,25 @@ function renderPlayer(video, source){
 function composeBrief(video){
   const bullets = localizedBullets(video);
   const lines = [
-    `${ex('localTitle')}: ${localizedTitle(video)}`,
-    `${ex('primaryCategory')}: ${ex(video.primary_campaign_category)}`,
+    `${ex('localTitle')}:`,
+    `${localizedTitle(video)}`,
     "",
-    `${ex('analysis')}:`,
-    ...bullets.map(item => `- ${item}`),
+    `${ex('primaryCategory')}:`,
+    `${ex(video.primary_campaign_category)}`,
     "",
-    `${ex('sourceField')}: ${video.source_url || ''}`,
+    `${ex('analysisLabel')}:`,
+    ...bullets.flatMap(item => [`- ${item}`, ""]),
+    `${ex('sourceField')}:`,
+    `${video.source_url || ''}`,
   ];
-  return lines.join("\n");
+  return lines.join("\n").trim();
 }
 function composeBatchBrief(videos){
   return videos.map((video, idx) => {
     return [
       `====================`,
       `#${idx + 1}`,
+      "",
       composeBrief(video)
     ].join("\n");
   }).join("\n\n");
@@ -271,8 +277,6 @@ function renderDetail(){
   $("briefPreview").textContent = composeBrief(video);
   $("toggleBriefBtn").textContent = isSelected(video) ? ex('remove') : ex('add');
   $("copyBriefBtn").textContent = ex('copy');
-  $("summaryLabel").textContent = ex('analysis');
-  $("insightList").innerHTML = localizedBullets(video).map(item => `<li>${item}</li>`).join('');
   $("transcriptLabel").textContent = ex('transcript');
   $("transcriptPreview").textContent = (video.asr && video.asr.transcript_preview) || 'ASR transcript unavailable.';
   $("tagLabel").textContent = ex('tags');
