@@ -14,16 +14,23 @@
     h1 { margin:0 0 8px; font-size:30px; line-height:1.1; }
     .sub { margin:0; color:var(--muted); line-height:1.55; max-width:880px; }
     select { min-width:180px; height:40px; border:1px solid var(--line); border-radius:10px; background:white; padding:0 12px; font-size:14px; }
-    .toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; padding-top:0; }`r`n    .toolbarRight { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+    .toolbarRight { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .filterBar { display:flex; gap:8px; flex-wrap:wrap; }
-    .filterBtn, .ghostBtn, .primaryBtn { border:1px solid var(--line); background:white; border-radius:999px; padding:8px 14px; font-size:14px; font-weight:700; color:#244052; cursor:pointer; }`r`n    .ghostBtn:hover, .primaryBtn:hover, .filterBtn:hover { background:#f6fafb; }`r`n    .primaryBtn { background:var(--brand); color:white; border-color:var(--brand); }`r`n    .primaryBtn:hover { background:#0d655f; }`r`n    .ghostBtn:disabled, .primaryBtn:disabled { opacity:.5; cursor:not-allowed; }
+    .filterBtn, .ghostBtn, .primaryBtn { border:1px solid var(--line); background:white; border-radius:999px; padding:8px 14px; font-size:14px; font-weight:700; color:#244052; cursor:pointer; }
     .filterBtn.active { background:var(--brand); color:white; border-color:var(--brand); }
+    .ghostBtn:hover, .primaryBtn:hover, .filterBtn:hover { background:#f6fafb; }
+    .primaryBtn { background:var(--brand); color:white; border-color:var(--brand); }
+    .primaryBtn:hover { background:#0d655f; }
+    .ghostBtn:disabled, .primaryBtn:disabled { opacity:.5; cursor:not-allowed; }
     .summaryPill { border:1px solid var(--line); border-radius:999px; background:white; padding:8px 12px; font-size:13px; color:#294154; }
-    main { display:grid; grid-template-columns: 410px minmax(0,1fr); min-height:calc(100vh - 145px); }
+    main { display:grid; grid-template-columns:410px minmax(0,1fr); min-height:calc(100vh - 145px); }
     .list { border-right:1px solid var(--line); background:rgba(255,255,255,.72); overflow:auto; max-height:calc(100vh - 145px); }
-    .item { width:100%; display:grid; grid-template-columns:28px 52px 88px minmax(0,1fr); gap:10px; border:0; border-bottom:1px solid var(--line); background:transparent; text-align:left; padding:12px 14px; cursor:pointer; color:inherit; }`r`n    .checkWrap { display:flex; align-items:flex-start; justify-content:center; padding-top:3px; }`r`n    .pickBox { width:18px; height:18px; accent-color:var(--brand); cursor:pointer; }
+    .item { width:100%; display:grid; grid-template-columns:28px 52px 88px minmax(0,1fr); gap:10px; border:0; border-bottom:1px solid var(--line); background:transparent; text-align:left; padding:12px 14px; cursor:pointer; color:inherit; }
     .item:hover { background:#f6fafb; }
     .item.active { background:var(--brand-soft); box-shadow: inset 4px 0 0 var(--brand); }
+    .checkWrap { display:flex; align-items:flex-start; justify-content:center; padding-top:3px; }
+    .pickBox { width:18px; height:18px; accent-color:var(--brand); cursor:pointer; }
     .rank { font-size:18px; font-weight:800; color:var(--brand); }
     .thumb { width:88px; aspect-ratio:16/10; border-radius:10px; object-fit:cover; background:#dce5ef; }
     .meta { min-width:0; }
@@ -33,7 +40,8 @@
     .badge { display:inline-flex; align-items:center; border-radius:999px; padding:3px 8px; font-size:11px; font-weight:700; }
     .badge.cat { background:#ecf8f6; color:#0c675f; border:1px solid #bfdfd9; }
     .badge.play { background:#eef6ff; color:#24518a; border:1px solid #c6daf5; }
-    .badge.wait { background:#fff6df; color:#7d5200; border:1px solid #e7c15e; }`r`n    .badge.selected { background:#fff7e7; color:#8b5a00; border:1px solid #f0c676; }
+    .badge.wait { background:#fff6df; color:#7d5200; border:1px solid #e7c15e; }
+    .badge.selected { background:#fff7e7; color:#8b5a00; border:1px solid #f0c676; }
     .detail { padding:20px; overflow:auto; max-height:calc(100vh - 145px); }
     .playerWrap { border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#0d1117; }
     .playerHead { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 12px; background:#111927; color:#dbe8ff; }
@@ -50,7 +58,8 @@
     .notice { margin-top:10px; border:1px solid var(--warn-line); background:var(--warn); color:#6b4700; border-radius:12px; padding:10px 12px; font-size:13px; line-height:1.5; }
     .detailGrid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:18px; margin-top:16px; align-items:start; }
     h2 { margin:0 0 10px; font-size:24px; line-height:1.24; }
-    .metaLine { color:var(--muted); font-size:13px; line-height:1.5; }`r`n    .briefActions { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 0; }
+    .metaLine { color:var(--muted); font-size:13px; line-height:1.5; }
+    .briefActions { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 0; }
     .stats { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin:14px 0; }
     .stat { border:1px solid var(--line); border-radius:12px; background:var(--panel); padding:10px; }
     .stat b { display:block; font-size:16px; }
@@ -59,7 +68,8 @@
     .box h3 { margin:0 0 8px; font-size:15px; }
     .insightList { margin:0; padding-left:18px; line-height:1.6; color:#263241; }
     .insightList li { margin-bottom:8px; }
-    .transcript { max-height:220px; overflow:auto; white-space:pre-wrap; font-size:13px; line-height:1.6; color:#334155; }`r`n    .briefPreview { max-height:none; min-height:170px; background:#f8fbfd; border:1px dashed #cfe0ea; border-radius:12px; padding:12px; }
+    .transcript { max-height:220px; overflow:auto; white-space:pre-wrap; font-size:13px; line-height:1.6; color:#334155; }
+    .briefPreview { max-height:none; min-height:200px; background:#f8fbfd; border:1px dashed #cfe0ea; border-radius:12px; padding:12px; }
     .tagRow { display:flex; flex-wrap:wrap; gap:8px; }
     .tag { display:inline-flex; align-items:center; min-height:28px; border:1px solid #badbd6; background:#ecf8f6; color:#0b625b; border-radius:999px; padding:4px 10px; font-size:13px; font-weight:700; }
     .links { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
@@ -72,7 +82,8 @@
       .list { max-height:42vh; border-right:0; border-bottom:1px solid var(--line); }
       .detail { max-height:none; }
       .detailGrid { grid-template-columns:1fr; }
-      .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }`r`n      .item { grid-template-columns:28px 44px 88px minmax(0,1fr); }
+      .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .item { grid-template-columns:28px 44px 88px minmax(0,1fr); }
     }
   </style>
 </head>
@@ -85,7 +96,14 @@
       </div>
       <select id="lang"></select>
     </div>
-    <div class="wrap toolbar">`r`n      <div class="filterBar" id="campaignFilters"></div>`r`n      <div class="toolbarRight">`r`n        <div class="summaryPill" id="headerSummary"></div>`r`n        <button class="ghostBtn" id="clearSelectionBtn"></button>`r`n        <button class="primaryBtn" id="exportSelectedBtn"></button>`r`n      </div>`r`n    </div>
+    <div class="wrap toolbar">
+      <div class="filterBar" id="campaignFilters"></div>
+      <div class="toolbarRight">
+        <div class="summaryPill" id="headerSummary"></div>
+        <button class="ghostBtn" id="clearSelectionBtn"></button>
+        <button class="primaryBtn" id="exportSelectedBtn"></button>
+      </div>
+    </div>
   </header>
   <main>
     <nav class="list" id="list"></nav>
@@ -104,7 +122,16 @@
       <div class="detailGrid">
         <div>
           <h2 id="videoTitle"></h2>
-          <div class="metaLine" id="videoMeta"></div>`r`n          <div class="briefActions">`r`n            <button class="ghostBtn" id="toggleBriefBtn"></button>`r`n            <button class="primaryBtn" id="copyBriefBtn"></button>`r`n          </div>`r`n          <div class="stats" id="stats"></div>`r`n          <div class="box">`r`n            <h3 id="briefLabel"></h3>`r`n            <div class="transcript briefPreview" id="briefPreview"></div>`r`n          </div>
+          <div class="metaLine" id="videoMeta"></div>
+          <div class="briefActions">
+            <button class="ghostBtn" id="toggleBriefBtn"></button>
+            <button class="primaryBtn" id="copyBriefBtn"></button>
+          </div>
+          <div class="stats" id="stats"></div>
+          <div class="box">
+            <h3 id="briefLabel"></h3>
+            <div class="transcript briefPreview" id="briefPreview"></div>
+          </div>
           <div class="box">
             <h3 id="summaryLabel"></h3>
             <ul class="insightList" id="insightList"></ul>
@@ -128,8 +155,7 @@
       </div>
     </section>
   </main>
-  <script src="https://www.youtube.com/iframe_api"></script>`r`n  <script src="app.js"></script>`r`n</body>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="app.js"></script>
+</body>
 </html>
-
-
-
