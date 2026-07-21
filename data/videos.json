@@ -86,8 +86,8 @@
     "asr_ready_total": 40,
     "caption_ready_total": 40,
     "analysis_multilang_ready_total": 40,
-    "youtube_uploaded_total": 27,
-    "youtube_pending_total": 10,
+    "youtube_uploaded_total": 36,
+    "youtube_pending_total": 1,
     "caption_empty_track_ids": [
       "BV1NxtZzfETf"
     ]
@@ -103,8 +103,8 @@
       "value": 10,
       "fun": 8
     },
-    "youtube_uploaded_total": 27,
-    "youtube_pending_total": 10
+    "youtube_uploaded_total": 36,
+    "youtube_pending_total": 1
   },
   "videos": [
     {
@@ -2609,8 +2609,8 @@
       "youtube_embed_url": null,
       "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "processing",
+      "youtube_api_upload_status": "uploaded",
       "player_sources": [
         {
           "type": "bilibili",
@@ -9092,23 +9092,23 @@
         "collect_count": 2335,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "FgSDgwBrOF4",
+      "youtube_watch_url": "https://youtu.be/FgSDgwBrOF4",
+      "youtube_embed_url": "https://www.youtube.com/embed/FgSDgwBrOF4?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7535904628697812264"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/FgSDgwBrOF4?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7535904628697812264.srt",
         "en": "captions_full/en/7535904628697812264.srt",
@@ -9401,23 +9401,23 @@
         "collect_count": 1978,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "_5W7wtK6InY",
+      "youtube_watch_url": "https://youtu.be/_5W7wtK6InY",
+      "youtube_embed_url": "https://www.youtube.com/embed/_5W7wtK6InY?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7537529956780313856"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/_5W7wtK6InY?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7537529956780313856.srt",
         "en": "captions_full/en/7537529956780313856.srt",
@@ -9703,23 +9703,23 @@
         "collect_count": 8224,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "mL_j1P7oA4g",
+      "youtube_watch_url": "https://youtu.be/mL_j1P7oA4g",
+      "youtube_embed_url": "https://www.youtube.com/embed/mL_j1P7oA4g?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7538761558286011698"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/mL_j1P7oA4g?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7538761558286011698.srt",
         "en": "captions_full/en/7538761558286011698.srt",
@@ -10010,23 +10010,23 @@
         "collect_count": 755,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "bs9lb69ORgk",
+      "youtube_watch_url": "https://youtu.be/bs9lb69ORgk",
+      "youtube_embed_url": "https://www.youtube.com/embed/bs9lb69ORgk?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7535531514021334281"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/bs9lb69ORgk?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7535531514021334281.srt",
         "en": "captions_full/en/7535531514021334281.srt",
@@ -10319,23 +10319,23 @@
         "collect_count": 4794,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "7Vs0BKIEyxQ",
+      "youtube_watch_url": "https://youtu.be/7Vs0BKIEyxQ",
+      "youtube_embed_url": "https://www.youtube.com/embed/7Vs0BKIEyxQ?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7532342218552610099"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/7Vs0BKIEyxQ?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7532342218552610099.srt",
         "en": "captions_full/en/7532342218552610099.srt",
@@ -10627,23 +10627,23 @@
         "collect_count": 723,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "X2uOL8M62ZU",
+      "youtube_watch_url": "https://youtu.be/X2uOL8M62ZU",
+      "youtube_embed_url": "https://www.youtube.com/embed/X2uOL8M62ZU?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7537245679463320847"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/X2uOL8M62ZU?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7537245679463320847.srt",
         "en": "captions_full/en/7537245679463320847.srt",
@@ -10927,23 +10927,23 @@
         "collect_count": 5210,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "BIdmZY4WAgg",
+      "youtube_watch_url": "https://youtu.be/BIdmZY4WAgg",
+      "youtube_embed_url": "https://www.youtube.com/embed/BIdmZY4WAgg?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7536167715484994854"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/BIdmZY4WAgg?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7536167715484994854.srt",
         "en": "captions_full/en/7536167715484994854.srt",
@@ -11243,23 +11243,23 @@
         "collect_count": 1690,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "XRLeUkiiJ_4",
+      "youtube_watch_url": "https://youtu.be/XRLeUkiiJ_4",
+      "youtube_embed_url": "https://www.youtube.com/embed/XRLeUkiiJ_4?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7535087809388940584"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/XRLeUkiiJ_4?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7535087809388940584.srt",
         "en": "captions_full/en/7535087809388940584.srt",
@@ -11552,23 +11552,23 @@
         "collect_count": 2452,
         "play_count": 0
       },
-      "youtube_video_id": null,
-      "youtube_watch_url": null,
-      "youtube_embed_url": null,
-      "youtube_upload_status": "待上傳 YouTube",
+      "youtube_video_id": "jO6Rft0BwdA",
+      "youtube_watch_url": "https://youtu.be/jO6Rft0BwdA",
+      "youtube_embed_url": "https://www.youtube.com/embed/jO6Rft0BwdA?cc_load_policy=0&rel=0",
+      "youtube_upload_status": "已上傳 YouTube unlisted",
       "youtube_caption_status": "7 語 SRT 已在網站側準備完成。",
-      "youtube_processing_status": null,
-      "youtube_api_upload_status": null,
+      "youtube_processing_status": "succeeded",
+      "youtube_api_upload_status": "processed",
       "player_sources": [
         {
-          "type": "source_link",
-          "label": "Source Link",
-          "url": "https://www.douyin.com/video/7535783373978586409"
+          "type": "youtube",
+          "label": "YouTube",
+          "embed_url": "https://www.youtube.com/embed/jO6Rft0BwdA?cc_load_policy=0&rel=0"
         }
       ],
-      "default_player": "none",
-      "playback_status": "pending_source",
-      "playback_notice_zh": "此片目前尚未取得可公開嵌入的播放來源；可先參考摘要、字幕與原始連結。",
+      "default_player": "youtube",
+      "playback_status": "playable",
+      "playback_notice_zh": "YouTube iframe 可搭配網站字幕 overlay，為目前最完整的參考播放方式。",
       "caption_tracks": {
         "zh-Hans": "captions_full/zh-Hans/7535783373978586409.srt",
         "en": "captions_full/en/7535783373978586409.srt",
