@@ -139,14 +139,11 @@ function ensurePlayerHost(){
     ytPlayer = null;
   }
 }
-function renderYouTubeFallback(embedUrl){
-  $("playerShell").innerHTML = `<iframe src="${embedUrl}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="subtitleOverlay"><div class="subtitleText" id="subtitleText"></div></div>`;
-}
-function loadYouTube(videoId, embedUrl){
+function loadYouTube(videoId){
   pendingYoutubeId = videoId;
   ensurePlayerHost();
   if (!state.youtubeReady || !window.YT || !window.YT.Player) {
-    if (embedUrl) renderYouTubeFallback(embedUrl);
+    renderPlaceholder('Loading YouTube player...');
     return;
   }
   if (!ytPlayer) {
@@ -214,7 +211,7 @@ function renderPlayer(video, source){
     return;
   }
   if (source.type === 'youtube' && video.youtube_video_id) {
-    loadYouTube(video.youtube_video_id, source.embed_url || video.youtube_embed_url);
+    loadYouTube(video.youtube_video_id);
     return;
   }
   if (source.type === 'bilibili' && source.embed_url) {
