@@ -17,6 +17,10 @@ let ytPlayer = null;
 let pendingYoutubeId = null;
 const fmt = new Intl.NumberFormat("zh-Hant");
 const $ = (id) => document.getElementById(id);
+function trackEvent(name, params = {}){
+  if (typeof window.gtag !== "function") return;
+  window.gtag("event", name, params);
+}
 const WARNINGS = {
   zh: "⚠請勿直接分享本網站或 YouTube link 給創作者，會有創作權疑慮！",
   en: "⚠ Do not share this site or YouTube links directly with creators. It may create copyright risk.",
@@ -279,7 +283,10 @@ function renderDetail(){
   $("statusLabel").textContent = ex('status');
   $("statusText").innerHTML = [`YouTube: ${video.youtube_upload_status || 'pending'}`, `Subtitles: ${video.youtube_caption_status || ''}`, `Playback: ${video.playback_status || ''}`].join('<br>');
   const captionHref = `captions_full/${captionLang()}/${video.video_id}.srt`;
-  $("quickLinks").innerHTML = [`<a href="${video.source_url}" target="_blank">${ex('source')}</a>`, `<a href="${captionHref}" target="_blank">${ex('caption')}</a>`].join('');
+  $("quickLinks").innerHTML = [
+    `<a href="${video.source_url}" target="_blank" data-link-type="source">${ex('source')}</a>`,
+    `<a href="${captionHref}" target="_blank" data-link-type="caption">${ex('caption')}</a>`
+  ].join('');
 }
 window.selectFilter = (key) => { state.filter = key; ensureSelection(); renderFilters(); renderList(); renderDetail(); };
 window.selectVideo = (overallIndex) => { state.overallIndex = overallIndex; renderList(); renderDetail(); };
@@ -302,3 +309,53 @@ $("exportSelectedBtn").addEventListener("click", () => {
   downloadTextFile(composeBatchBrief(videos), `fortune-run-brief-${currentLangCode()}-${videos.length}.txt`);
 });
 fetch('data/videos.json').then(r => r.json()).then(data => { state.data = data; renderLang(); });
+
+const originalToggleSelection = window.toggleSelection;
+window.toggleSelection = (videoId) => {
+  const wasSelected = state.selectedIds.has(videoId);
+  originalToggleSelection(videoId);
+  const video = state.data ? state.data.videos.find(item => item.video_id === videoId) : null;
+  trackEvent("toggle_video_selection", {
+    video_id: videoId,
+    selection_action: wasSelected ? "remove" : "add",
+    video_rank: video ? video.rank : undefined,
+    primary_category: video ? video.primary_campaign_category : undefined,
+    language: currentLangCode(),
+    selected_count: state.selectedIds.size,
+  });
+};
+$("copyBriefBtn").addEventListener("click", async () => {
+  const video = currentVideo();
+  setTimeout(() => {
+    trackEvent("copy_brief", {
+      video_id: video.video_id,
+      video_rank: video.rank,
+      primary_category: video.primary_campaign_category,
+      language: currentLangCode(),
+      platform: video.platform,
+    });
+  }, 0);
+});
+$("exportSelectedBtn").addEventListener("click", () => {
+  const videos = sortedSelectedVideos();
+  if (!videos.length) return;
+  trackEvent("export_brief", {
+    language: currentLangCode(),
+    selected_count: videos.length,
+    categories: [...new Set(videos.map(video => video.primary_campaign_category))].join(","),
+    video_ranks: videos.map(video => video.rank).join(","),
+  });
+});
+$("quickLinks").addEventListener("click", (event) => {
+  const link = event.target.closest("a[data-link-type]");
+  if (!link) return;
+  const video = currentVideo();
+  if (!video) return;
+  trackEvent(link.dataset.linkType === "caption" ? "download_subtitle" : "open_source_link", {
+    video_id: video.video_id,
+    video_rank: video.rank,
+    primary_category: video.primary_campaign_category,
+    language: currentLangCode(),
+    platform: video.platform,
+  });
+});
